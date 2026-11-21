@@ -1,1 +1,45 @@
 @import "tailwindcss";
+
+/* `dark` is driven by a class on <html>, not by the system preference */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --font-display: "Pixelify Sans", ui-monospace, monospace;
+  --font-body: "JetBrains Mono", ui-monospace, monospace;
+  --color-panel: var(--panel);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+}
+
+/* Day: bluish glass panels over natural window light */
+:root {
+  --panel: rgb(232 241 252 / 0.74);
+  --ink: #17213b;
+  --muted: #4a5878;
+  --line: #2c3c66;
+  --accent: #0b7285;
+}
+
+/* Night: dark violet panels, amber accent = lamp color */
+.dark {
+  --panel: rgb(16 12 38 / 0.74);
+  --ink: #ece7ff;
+  --muted: #a9a2cf;
+  --line: #7a6fc4;
+  --accent: #ffb454;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #0d1020;
+  color: var(--ink);
+  font-family: var(--font-body);
+}
