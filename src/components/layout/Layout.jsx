@@ -21,11 +21,11 @@ export default function Layout() {
 
       {/*
         The wrapper does not capture clicks (pointer-events-none); only the panel does,
-        so the center and the right side of the screen let clicks through to the
-        background. On mobile the panel starts below the top 42% to leave the window visible.
+        so the areas outside the centered panel let clicks through to the background.
+        On mobile the panel starts below the top 42% to leave the window visible.
       */}
       <div className="pointer-events-none relative z-10 min-h-dvh pt-[42dvh] lg:pt-0">
-        <div className="pointer-events-auto border-2 border-line bg-panel text-ink shadow-[4px_4px_0_0_var(--line)] backdrop-blur-md transition-colors duration-1000 max-lg:min-h-[58dvh] max-lg:border-x-0 max-lg:border-b-0 lg:fixed lg:bottom-6 lg:left-6 lg:top-6 lg:w-[min(38rem,40vw)] lg:overflow-y-auto">
+        <div className="pointer-events-auto border-2 border-line bg-panel text-ink shadow-[4px_4px_0_0_var(--line)] backdrop-blur-md transition-colors duration-1000 max-lg:min-h-[58dvh] max-lg:border-x-0 max-lg:border-b-0 lg:fixed lg:bottom-6 lg:left-1/2 lg:top-6 lg:w-[min(38rem,40vw)] lg:-translate-x-1/2 lg:overflow-y-auto">
           <header className="sticky top-0 z-10 border-b-2 border-line bg-panel px-5 py-3 backdrop-blur-md">
             <p className="font-display text-lg">
               mariano@room:
