@@ -14,7 +14,7 @@ export default function RoomBackground() {
           isNight ? 'opacity-0' : 'opacity-100'
         }`}
       />
-      {/* Side vignette: keeps panel contrast without covering the center of the screen */}
+      {/* Left vignette: adds depth beneath the window backdrop */}
       <div className="absolute inset-0 bg-linear-to-r from-black/35 via-transparent to-transparent" />
     </div>
   )
